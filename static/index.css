@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css');
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    font-family: Roboto;
+}
+
+body {
+    background-image: url('./nature.png');
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fa-magnifying-glass {
+    color: white;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo-wrapper .text {
+    font-size: 75px;
+    font-family: "Roboto";
+    color: #FFF;
+}
+
+.logo-wrapper h1 {
+    color: white;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    background: none;
+    font-family: inherit;
+    padding: 0px 17px;
+    height: 48px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    outline: none;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 50px;
+    color: black;
+}
+
+form input::placeholder {
+    color: black;
+}
+
+form input:focus {
+    border: 1px solid rgba(253, 253, 253, 0.514);
+    border-radius: 6px;
+    animation: fadeInAnimation ease-in-out 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.navbar {
+    background-color: transparent;
+    width: 32.5%;
+    height: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 5px;
+    position: fixed;
+}
+h1 {
+    background: url('./nature.png') -20px -20px no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.1px blue;
+    background-size: cover;
+    text-align: center;
+    font-size: 70px;
+    animation: stroketransition 6s infinite;
+  }
+  
+  @keyframes stroketransition {
+    0% {
+      -webkit-text-stroke-color: blue;
+    }
+    50% {
+      -webkit-text-stroke-color: purple;
+    }
+    100% {
+      -webkit-text-stroke-color: blue;
+    }
+  }
+  
+  
+a, button {
+    font-size: 20px;
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+    transition: all .2s ease-in-out; 
+} 
+a, button:hover { 
+    transform: scale(1.1); 
+}
+
+
+.hidden{
+  display: none;
+  
+}
+
+#settingsIcon{
+    font-size: 400px;
+    color: white;
+}
+
+#settingsWindow {
+  position: absolute;
+  z-index: 9;
+  background-color: rgb(22, 22, 22);
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  color: white;
+  padding-bottom: 4px;
+}
+
+#settingsWindowHeader {
+/*   padding: 10px; */
+  height: 24px;
+  cursor: move;
+  z-index: 10;
+  font-size:small;
+  background: linear-gradient(to top, #2f3241 0%, #44495e 100%);
+  background-color: rgb(15, 15, 15);
+  color: #fff;
+}
+#closeButton {
+    color: white;
+    background-color: #2f3241;
+	border: 2px solid #2f3241;
+}
+
+#theme{
+	width: 200px;
+  padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: #2f3241ee;
+	color: white;
+	font-size: 16px;
+}
+#cloak {
+    color: white;
+    background-color: #2f3241;
+	border: 2px solid #2f3241;
+}
+

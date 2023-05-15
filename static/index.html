@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Canvas</title>
+    <meta name="description" content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!" />
+    <meta name="keywords" content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked, Landon Orr proxy ultraviolet">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link href="index.css" rel="stylesheet">
+  <link rel="icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico">
+
+</head>
+
+<body>
+    <div id="settingsWindow" class="hidden" style="height: 325px; width: 300px;">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div id="settingsWindowheader">Settings</div>
+        <p id="theme_text" >Theme the app will use</p>
+              <form>
+                  <select id="theme" name="theme" onchange="handleThemeSelectChange(this)">
+                      <option value="default">Default</option> 
+                      <option value="neondark" >old theme</option>
+                      <option value="flatlight">rainbow</option>
+                      <option value="rickMorty">rick and morty</option>
+                  </select>
+                  
+              </form>
+              <br/>
+          <button id='cloak'>CLOAK</button>
+          <button id="closeButton" onclick="handleSettingsClose(this)">Done</button>
+      </div>
+    <div title="Ultraviolet" class="logo-wrapper">
+      <img src="./logo.png"
+        width=200
+        height=200/>
+            <nav class="navbar">
+        <a href="">
+            <button>
+                <img src="https://rawcdn.githack.com/greatshot101/Project-Ultramaroon/6854f9d3c457d0a7f15ac56922257b7a0fb9f7f3/static/assets/home.png" width="40" height="40">
+            </button>
+        </a>
+        <a href="./about.html">
+            <button>
+                <img src="https://rawcdn.githack.com/greatshot101/Project-Ultramaroon/6854f9d3c457d0a7f15ac56922257b7a0fb9f7f3/static/assets/about.png" width="40" height="40">
+            </button>
+        </a>
+        <a onclick="handleSettings()">
+            <button>
+                <img src="https://rawcdn.githack.com/greatshot101/Project-Ultramaroon/6854f9d3c457d0a7f15ac56922257b7a0fb9f7f3/static/assets/settings.png" width="40" height="40">
+            </button>
+        </a>
+        <a href="https://discord.gg/NaJqGBmAuG">
+            <button> <img src="https://rawcdn.githack.com/greatshot101/Project-Ultramaroon/6854f9d3c457d0a7f15ac56922257b7a0fb9f7f3/static/assets/discord.png" width ="40" height="40"> </button>
+        </a>
+            <button> <img src="https://rawcdn.githack.com/greatshot101/Project-Ultramaroon/6854f9d3c457d0a7f15ac56922257b7a0fb9f7f3/static/assets/gg.png" width ="40" height="40" id ="gg"> </button>
+    </nav>
+
+    </div>
+    <h1>Project Ultramaroon</h1>
+       <form id="UVForm">
+        <input placeholder="Search the web freely" id="UVInput">
+    </form>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <script src="index.js"></script>
+    <script src="https://rawcdn.githack.com/greatshot101/Project-Ultramaroon/6854f9d3c457d0a7f15ac56922257b7a0fb9f7f3/static/js/main.js"></script>
+    <script>
+        var urlObj = new window.URL(window.location.href);
+          var url = self.location.href;
+          if (url) {
+            var win;
+     
+            document.getElementById('gg').onclick = function() {
+              if (win) {
+                win.focus();
+              } else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.title = "Google Docs";
+                win.document.body.appendChild(iframe);
+              }
+              console.log(e)
+            };
+          }
+      </script>
+    <script>
+      document.getElementById('cloak').onclick = function() {
+       document.getElementsByTagName('title')[0].innerHTML = 'Google Docs';
+        document.querySelector("link[rel*='icon']").href = "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
+    };
+    </script>
+    </body>
+        <script>
+            loadDefTheme()
+        </script>
+    </html>
